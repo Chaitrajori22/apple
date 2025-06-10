@@ -9,23 +9,20 @@ pipeline {
               sh'maven clean'
           }
         }
-    
-       stage("compile") {
-         steps{
+    stage("compile") {
+         steps {
             sh'maven compile'
          }
        }
-   
-        stage("test") {
-            steps{
+    stage("test") {
+            steps {
                sh'maven test'
             }
         }
-   
-         stage("package") {
-             steps{
+    stage("package") {
+             steps {
                sh'maven package'
              }
          }
-  }
+    }
 }
